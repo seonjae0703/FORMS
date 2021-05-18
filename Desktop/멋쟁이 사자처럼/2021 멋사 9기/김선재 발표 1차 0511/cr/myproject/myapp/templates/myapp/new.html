@@ -1,0 +1,16 @@
+<h1> New Blog </h1>
+<hr>
+<!-- form : 정보를 입력받는 태그 -->
+<form action="{% url 'create' %}" method="post">
+    {% csrf_token %}
+    <div>
+        제목 : <input type="text" name ="title">
+    </div>
+    <div>
+        본문 : <textarea name ="body" cols="30" rows="10"></textarea>
+    </div>
+    <button type="submit">작성</button>
+</form>
+
+
+
